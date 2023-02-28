@@ -152,18 +152,6 @@ class AATree(Tree):
 
         self.root = delete_helper(self.root, x)
 
-    def lookup(self, x) -> bool:
-        """Returns whether x is in tree"""
-        p = self.root
-        while p is not None:
-            if p.val == x:
-                return True
-            elif x < p.val:
-                p = p.left
-            else:
-                p = p.right
-        return False
-
     def min(self):
         """Returns the minimum value in the tree"""
         if self.root is None:
